@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import HomePage from "./pages/home";
 import { Routes, Route } from "react-router";
+import AboutPage from "./pages/about";
+import Header from "./components/Header";
 
 const API_URL = import.meta.env.VITE_API_URL;
 
@@ -33,6 +35,8 @@ const App = () => {
   }, [limit]);
 
   return (
+    <>
+    <Header />
     <Routes>
       <Route
         path="/"
@@ -50,7 +54,9 @@ const App = () => {
           />
         }
       />
+      <Route path="/about" element={<AboutPage />} />
     </Routes>
+    </>
   );
 };
 
