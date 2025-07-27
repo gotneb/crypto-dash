@@ -1,12 +1,30 @@
-# React + Vite
+# 💹 Crypto Dash
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Crypto Dash is a modern, responsive cryptocurrency dashboard built with React. It fetches real-time data from a public API and provides users with an intuitive interface to explore live crypto prices, charts, and key market metrics.
 
-Currently, two official plugins are available:
+<p align="center">
+  <img src="./images/home.png" alt="Home screen" width="600"/>
+</p>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
+- ⚡ Live Price Tracking – Displays real-time cryptocurrency prices, market cap, and percentage changes.
+- 📈 Interactive Chart – Visualize 7-day price history for each coin using dynamic line charts.
+- 🔍 Search & Filter – Instantly filter cryptocurrencies by name or symbol.
+- 🧮 Sorting Options – Sort coins by market cap, price, and more.
+- 📊 Detailed Coin Pages – Click any coin to see full market details, including 24h high/low, rank, and historical chart.
+- 🎨 Responsive Dark UI – Built with a sleek, dark-themed, mobile-friendly design.
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
+- React – UI rendering and component architecture
+- Charts.js – Data visualization (charts)
+- Fetch API – HTTP requests to fetch live data
+- CSS Modules
+- CoinGecko API – Data source
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+##  🚀 How to Run
+```bash
+git clone https://github.com/gotneb/crypto-dash.git
+cd crypto-dash
+npm install
+npm start
+```
