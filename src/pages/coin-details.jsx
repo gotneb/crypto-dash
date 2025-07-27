@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router";
 import Spinner from "../components/Spinner";
+import CoinChart from "../components/CoinChart";
 
 const API_URL = import.meta.env.VITE_COIN_API_URL;
 
@@ -69,11 +70,17 @@ const CoinDetailsPage = () => {
             </h4>
           </div>
 
+          <CoinChart coinId={id} />
+
           <div className="coin-details-links">
             {coin.links.homepage[0] && (
               <p>
-                <a href={coin.links.homepage[0]} target="_blank" rel="noopener noreferrer">
-                    Website
+                <a
+                  href={coin.links.homepage[0]}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Website
                 </a>
               </p>
             )}
@@ -81,14 +88,18 @@ const CoinDetailsPage = () => {
           <div className="coin-details-links">
             {coin.links.blockchain_site[0] && (
               <p>
-                <a href={coin.links.blockchain_site[0]} target="_blank" rel="noopener noreferrer">
-                    Blockchain Explorer
+                <a
+                  href={coin.links.blockchain_site[0]}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Blockchain Explorer
                 </a>
               </p>
             )}
           </div>
           {coin.categories.length > 0 && (
-            <p>Categories: {coin.categories.join(', ')}</p>
+            <p>Categories: {coin.categories.join(", ")}</p>
           )}
         </>
       )}
